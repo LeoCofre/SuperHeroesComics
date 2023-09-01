@@ -4,13 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import cl.awakelab.superheroes.model.data.local.detail.HeroDetailEntity
 
-@Database(entities = [HeroEntity :: class], version = 1)
-abstract class HeroDataBase: RoomDatabase() {
+@Database(entities = [HeroEntity::class, HeroDetailEntity::class], version = 1)
+abstract class HeroDataBase : RoomDatabase() {
 
     abstract fun getHeroDao(): HeroDao
 
-    companion object{
+    companion object {
         @Volatile
         private var INSTANCE: HeroDataBase? = null
 

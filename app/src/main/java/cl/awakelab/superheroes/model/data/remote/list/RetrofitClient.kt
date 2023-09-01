@@ -8,13 +8,13 @@ const val BASE_URL = " https://y-mariocanedo.vercel.app/"
 class RetrofitClient {
     companion object {
 
-        fun retrofitInstance(): HerosApi {
+        fun retrofitInstance(): HeroApi {
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
-            return retrofit.create(HerosApi::class.java)
+            return retrofit.create(HeroApi::class.java)
         }
     }
 }
