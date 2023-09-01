@@ -46,10 +46,11 @@ class DetailFragment : Fragment() {
             if (it != null) {
                 binding.imgDetail.load(it.imagenLink)
                 binding.txtNombreDetail.text = it.nombre
-                binding.txtOrigen.text = it.origen
-                binding.txtAnioCreacion.text = it.anioCreacion.toString()
-                binding.txtPoder.text = it.poder
-                binding.txtColor.text = it.color
+                binding.txtOrigen.text = getString(R.string.origen) + " " + it.origen
+                binding.txtAnioCreacion.text =
+                    getString(R.string.a_o_creacion) + " " + it.anioCreacion.toString()
+                binding.txtPoder.text = getString(R.string.poder) + " " + it.poder
+                binding.txtColor.text = getString(R.string.color) + " " + it.color
                 if (!it.traduccion) {
                     binding.txtTraduccion.text = getString(R.string.sin_traduccion)
                 } else {
@@ -75,7 +76,12 @@ class DetailFragment : Fragment() {
                         intentMail.putExtra(Intent.EXTRA_EMAIL, arrayOf(mail))
                         intentMail.putExtra(Intent.EXTRA_SUBJECT, asunto)
                         intentMail.putExtra(Intent.EXTRA_TEXT, message)
-                        startActivity(Intent.createChooser(intentMail, getString(R.string.Send_Mail)))
+                        startActivity(
+                            Intent.createChooser(
+                                intentMail,
+                                getString(R.string.Send_Mail)
+                            )
+                        )
                     }
                 }
             }
