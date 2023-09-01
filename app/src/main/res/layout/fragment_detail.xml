@@ -99,6 +99,22 @@
                 android:text="Poder"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/txt_color"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:gravity="center"
+                android:text="Color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_traduccion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Traduccion"
+                android:textSize="20sp" />
+
 
         </LinearLayout>
     </ScrollView>

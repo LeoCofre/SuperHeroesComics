@@ -13,7 +13,7 @@ class Repository(private val heroApi: HeroApi, private val heroDao: HeroDao) {
 
     fun getHeroEntity(): LiveData<List<HeroEntity>> = heroDao.getHeros()
 
-    fun getHeroDetailEntity(id: Long): LiveData<HeroDetailEntity> = heroDao.getHeroDetails(id)
+    fun getHeroDetailEntity(id: Int): LiveData<HeroDetailEntity> = heroDao.getHeroDetails(id)
 
     suspend fun getHeros() {
         try {
@@ -30,7 +30,7 @@ class Repository(private val heroApi: HeroApi, private val heroDao: HeroDao) {
         }
     }
 
-    suspend fun getHeroDetails(id: Long) {
+    suspend fun getHeroDetails(id: Int) {
         try {
             val response = heroApi.getDataHerosDetail(id)
             if (response.isSuccessful) {

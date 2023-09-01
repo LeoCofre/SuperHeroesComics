@@ -14,5 +14,8 @@ fun HeroDetail.transformToDetailEntity(): HeroDetailEntity =
         this.imagenLink,
         this.nombre,
         this.origen,
-        this.poder
+        this.poder,
+        this.color,
+        this.traduccion
+
     )

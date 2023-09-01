@@ -13,7 +13,7 @@ class HeroViewModel(application: Application): AndroidViewModel(application) {
 
     private val repository: Repository
     fun herosLiveData() = repository.getHeroEntity()
-    fun heroDetailLiveData(id: Long) = repository.getHeroDetailEntity(id)
+    fun heroDetailLiveData(id: Int) = repository.getHeroDetailEntity(id)
 
     init {
         val api = RetrofitClient.retrofitInstance()
@@ -22,7 +22,7 @@ class HeroViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun getHeroViewModel() = viewModelScope.launch { repository.getHeros() }
-    fun getHeroDetailsViewModel(id: Long) = viewModelScope.launch {
+    fun getHeroDetailsViewModel(id: Int) = viewModelScope.launch {
         repository.getHeroDetails(id)
     }
 

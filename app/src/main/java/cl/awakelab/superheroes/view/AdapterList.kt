@@ -12,7 +12,7 @@ import coil.load
 
 class AdapterList: RecyclerView.Adapter<AdapterList.ViewHolder>() {
 
-    private lateinit var binding: ItemLayoutBinding
+    lateinit var binding: ItemLayoutBinding
     private val listItemHero = mutableListOf<HeroEntity>()
 
 
@@ -37,7 +37,7 @@ class AdapterList: RecyclerView.Adapter<AdapterList.ViewHolder>() {
     }
 
 
-    class ViewHolder(val binding: ItemLayoutBinding): RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: ItemLayoutBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(hero: HeroEntity) {
             binding.imgItem.load(hero.imagenLink)
             binding.textname.text = hero.nombre

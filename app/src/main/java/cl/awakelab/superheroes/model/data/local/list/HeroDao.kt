@@ -22,5 +22,5 @@ interface HeroDao {
     suspend fun insertHeroDetail(heroDetailEntity: HeroDetailEntity)
 
     @Query("Select * from tabla_heroe_details where id = :id" )
-    fun getHeroDetails(id: Long): LiveData<HeroDetailEntity>
+    fun getHeroDetails(id: Int): LiveData<HeroDetailEntity>
 }
