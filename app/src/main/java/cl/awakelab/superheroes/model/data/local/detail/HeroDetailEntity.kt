@@ -11,6 +11,8 @@ class HeroDetailEntity (
     val imagenLink: String,
     val nombre: String,
     val origen: String,
-    val poder: String
+    val poder: String,
+    val color: String,
+    val traduccion: Boolean
 
 )

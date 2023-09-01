@@ -9,6 +9,6 @@ interface HeroApi {
     @GET("superheroes/")
     suspend fun getDataHeros(): Response<List<Hero>>
 
-    @GET("{ID}")
-    suspend fun getDataHerosDetail(@Path("id") id: Long): Response<HeroDetail>
+    @GET("superheroes/{id}")
+    suspend fun getDataHerosDetail(@Path("id") id: Int): Response<HeroDetail>
 }
