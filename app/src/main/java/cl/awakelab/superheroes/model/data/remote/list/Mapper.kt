@@ -5,7 +5,7 @@ import cl.awakelab.superheroes.model.data.local.list.HeroEntity
 import cl.awakelab.superheroes.model.data.remote.detail.HeroDetail
 
 fun Hero.transformToEntity(): HeroEntity =
-    HeroEntity(this.anioCreacion, this.id, this.imagenLink, this.nombre, this.origen, this.poder)
+    HeroEntity(this.id,this.anioCreacion,this.imagenLink, this.nombre,  this.origen, this.poder)
 
 fun HeroDetail.transformToDetailEntity(): HeroDetailEntity =
     HeroDetailEntity(

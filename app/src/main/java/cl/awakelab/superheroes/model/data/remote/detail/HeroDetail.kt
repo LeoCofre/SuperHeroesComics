@@ -4,12 +4,12 @@ import com.google.gson.annotations.SerializedName
 
 
 data class HeroDetail(
-    @SerializedName("año_creacion")val anioCreacion: Int,
     val id: Int,
-    val imagenLink: String,
     val nombre: String,
     val origen: String,
+    val imagenLink: String,
     val poder: String,
+    @SerializedName("año_creacion")val anioCreacion: Int,
     val color: String,
     val traduccion: Boolean
 )
