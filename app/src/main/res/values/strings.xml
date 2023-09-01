@@ -5,4 +5,13 @@
     <string name="consulta_asunto">Consulta Asunto</string>
     <string name="sin_traduccion">Sin Traducción</string>
     <string name="cuenta_con_traduccion_al_español">Cuenta con traducción al Español</string>
+    <string name="message">message</string>
+    <string name="imagen_clickable">imagen_clickable</string>
+    <string name="nombre">nombre</string>
+    <string name="origen">Origen</string>
+    <string name="a_o_creacion">Año Creacion</string>
+    <string name="poder">Poder</string>
+    <string name="color">Color</string>
+    <string name="traduccion">Traduccion</string>
+    <string name="imagen_detalle">imagen_detalle</string>
 </resources>

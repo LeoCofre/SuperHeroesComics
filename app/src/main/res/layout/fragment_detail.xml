@@ -16,7 +16,7 @@
         android:src="@drawable/baseline_email_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="message"
+        android:contentDescription="@string/message"
         android:focusable="true" />
 
     <ScrollView
@@ -59,7 +59,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0"
                         tools:src="@tools:sample/avatars"
-                        android:contentDescription="imagen_clickable" />
+                        android:contentDescription="@string/imagen_clickable" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:text="nombre"
+                android:text="@string/nombre"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Origen"
+                android:text="@string/origen"
                 android:textSize="20sp" />
 
             <TextView
@@ -87,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Año Creacion"
+                android:text="@string/a_o_creacion"
                 android:textSize="20sp"
                 android:typeface="sans" />
 
@@ -96,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="128dp"
                 android:gravity="center"
-                android:text="Poder"
+                android:text="@string/poder"
                 android:textSize="20sp" />
 
             <TextView
@@ -104,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
                 android:gravity="center"
-                android:text="Color"
+                android:text="@string/color"
                 android:textSize="20sp" />
 
             <TextView
@@ -112,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="Traduccion"
+                android:text="@string/traduccion"
                 android:textSize="20sp" />
 
 

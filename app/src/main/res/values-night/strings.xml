@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a_o_creacion">Año Creacion</string>
+    <string name="poder">Poder</string>
+    <string name="color">Color</string>
+    <string name="traduccion">Traduccion</string>
+    <string name="imagen_detalle">imagen_detalle</string>
+</resources>
