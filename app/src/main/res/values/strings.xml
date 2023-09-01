@@ -14,4 +14,10 @@
     <string name="color">Color</string>
     <string name="traduccion">Traduccion</string>
     <string name="imagen_detalle">imagen_detalle</string>
+    <string name="asunto">Votación %1$s.</string>
+    <string name="cuerpo_msn">Hola, \n\nQuiero que el siguiente super heroe %1$s aparezca en la nueva edición de biografias animadas.
+    \n Numero contacto:____________\n\n Gracias.</string>
+    <string name="direccion_msn">info@prueba.cl</string>
+    <string name="Send_Mail">Send Mail</string>
+    <string name="id">id</string>
 </resources>

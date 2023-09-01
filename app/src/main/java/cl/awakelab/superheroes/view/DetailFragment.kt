@@ -25,7 +25,7 @@ class DetailFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString("id")
+            param1 = it.getString(getString(R.string.id))
 
         }
     }
@@ -53,7 +53,8 @@ class DetailFragment : Fragment() {
                 if (!it.traduccion) {
                     binding.txtTraduccion.text = getString(R.string.sin_traduccion)
                 } else {
-                    binding.txtTraduccion.text = getString(R.string.cuenta_con_traduccion_al_español)
+                    binding.txtTraduccion.text =
+                        getString(R.string.cuenta_con_traduccion_al_español)
                 }
             }
         }
@@ -63,22 +64,18 @@ class DetailFragment : Fragment() {
         viewModel.heroDetailLiveData(param1.toString().toInt())
             .observe(viewLifecycleOwner) {
                 if (it != null) {
-                    val asunto = "Consulta ${it.nombre} id ${it.id}"
-                    val message =
-                        "Hola, Quiero que el siguiente super héroes ${it.nombre}aparezca, en la nueva edición de \n" +
-                                "biografías animadas. \n" +
-                                "Número contacto: _________\n" +
-                                "Gracias."
+                    val asunto = getString(R.string.asunto, it.nombre)
+                    val message = getString(R.string.cuerpo_msn, it.nombre)
+                    val mail = getString(R.string.direccion_msn)
 
 
                     binding.floatingActionButton.setOnClickListener {
-                        val mail = "info@prueba.cl"
                         val intentMail = Intent(Intent.ACTION_SEND, Uri.parse(mail))
                         intentMail.type = "text/plain"
                         intentMail.putExtra(Intent.EXTRA_EMAIL, arrayOf(mail))
                         intentMail.putExtra(Intent.EXTRA_SUBJECT, asunto)
                         intentMail.putExtra(Intent.EXTRA_TEXT, message)
-                        startActivity(Intent.createChooser(intentMail, "Send Mail"))
+                        startActivity(Intent.createChooser(intentMail, getString(R.string.Send_Mail)))
                     }
                 }
             }
